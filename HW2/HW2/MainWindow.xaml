@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="172*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="413*"/>
+            <ColumnDefinition Width="387*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Background="AliceBlue" Grid.Row="1">
+            <Button x:Name="ava1Btn" Click="Ava1BtnClick" Width="100" >
+                <StackPanel>
+                    <Image Source="ava1.jpg"></Image>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ava2Btn" Click="Ava2BtnClick" Width="120">
+                <StackPanel>
+                    <Image Source="ava2.jpg"></Image>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ava3Btn" Click="Ava3BtnClick" Width="100">
+                <StackPanel>
+                    <Image Source="ava3.jpg"></Image>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ava4Btn" Click="Ava4BtnClick" Width="100">
+                <StackPanel>
+                    <Image Source="ava4.jpg"></Image>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Image x:Name="profileImage" Grid.Column="0" Grid.Row="0" Margin="0,0,134,0" />
+        <Label Grid.Row="0" Grid.Column="1" Content="Full name:" FontSize="20" Margin="0,2,287,302"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Login:" FontSize="20" Margin="0,52,287,252" />
+        <Label Grid.Row="0" Grid.Column="1" Content="Hobbies:" FontSize="20" Margin="0,102,287,202"/>
+        <TextBox x:Name="fullNameTB" Grid.Row="0" Grid.Column="1" FontSize="20" Width="200" Height="40" Margin="50,0,0,335" />
+        <TextBox x:Name="loginTB" Grid.Row="0" Grid.Column="1" FontSize="20" Width="200" Height="40" Margin="50,0,0,235"/>
+        <TextBox x:Name="hobbiesTB" Grid.Row="0" Grid.Column="1" FontSize="20" Width="200" Height="40" Margin="50,0,0,135"/>
+        <Button x:Name="acceptBtn" Click="AcceptBtnClick" Grid.Column="1" Content="ACCEPT CHANGES" FontSize="40" Background="Red" Grid.Row="1"/>
     </Grid>
 </Window>
